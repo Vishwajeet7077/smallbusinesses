@@ -1,0 +1,12 @@
+<div>
+    <a href="{% url 'event-create' %}">Add Events</a>
+</div>
+<div>
+    {% for event in events %}
+    <div>
+        <a href="{% url 'event-detail' event.id %}">{{event.name}}</a>
+        <a href="{% url 'event-update' event.id %}">Update</a>
+        <a href="{% url 'event-delete' event.id %}">Delete</a>
+    </div>
+    {% endfor %}
+</div>
