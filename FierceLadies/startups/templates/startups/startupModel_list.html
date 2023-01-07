@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    {% for startup in startups %}
+        <a href="{% url 'startupDetail' startup.id %}">{{startup.name}}</a>
+    {% endfor %}
+</div>
+{% endblock %}
